@@ -2,7 +2,7 @@ const giftBox = document.getElementById("giftBox");
 const surpriseBox = document.getElementById("surpriseBox");
 const title = document.getElementById("title");
 const music = document.getElementById("bgMusic");
-music.volume = 0.2;
+music.volume = 0.1;
 
 let clickCount = 0;
 
@@ -34,5 +34,6 @@ giftBox.addEventListener("click", () => {
     }
   }
 });
+
 
 

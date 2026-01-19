@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #ffd6e8, #e0c3fc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  max-width: 90%;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #5a2a83;
+}
+
+.gift-box {
+  font-size: 90px;
+  cursor: pointer;
+  animation: float 2s infinite ease-in-out;
+}
+
+.gift-box:hover {
+  animation: shake 0.4s infinite;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+  100% { transform: rotate(0); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.surprise {
+  margin-top: 25px;
+  padding: 15px;
+  background: white;
+  border-radius: 12px;
+  animation: fadeIn 1s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating hearts */
+.hearts::before {
+  content: "💗 💖 💕 💘 💝";
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: -10%;
+  animation: hearts 6s linear infinite;
+}
+
+@keyframes hearts {
+  0% { top: -10%; opacity: 0; }
+  50% { opacity: 1; }
+  100% { top: 110%; opacity: 0; }
+}
